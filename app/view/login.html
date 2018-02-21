@@ -1,0 +1,24 @@
+<md-dialog-content layout-margin>
+    <h2 class="md-title">Ingreso</h2>
+    <form ng-submit="logeo()">
+        <md-input-container class="md-block">
+            <md-select ng-model="typedocument" placeholder="Documento de identidad">
+                <md-option value="CC">Cedula</md-option>
+                <md-option value="TI">Tarjeta Identidad</md-option>
+                <md-option value="CE">Cedula Extranjeria</md-option>
+                <md-option value="PS">Pasaporte</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <input type="number" ng-model="numberdocument" placeholder="Documento" required>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <input type="password" ng-model="password" placeholder="password" required>
+        </md-input-container>
+        <a ng-click="recuperar($event)" href>olvide la contraseña</a>
+        <div>
+            <md-button class="color-prymary" type="submit">Entrar</md-button>
+            <md-button class="color-prymary" type="button">Invitado</md-button>
+        </div>
+    </form>
+</md-dialog-content>

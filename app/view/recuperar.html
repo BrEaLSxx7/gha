@@ -1,0 +1,18 @@
+<md-dialog md-theme="default" class="md-default-theme md-transition-in" role="alertdialog" tabindex="-1">
+    <md-dialog-content class="md-dialog-content" role="document" tabindex="-1">
+        <h2 class="md-title ng-binding">Ingreso</h2>
+        <div class="md-dialog-content-body ng-scope"></div>
+       <md-input-container class="md-block">
+                <md-select ng-model="someModel" placeholder="Documento de identidad">
+                    <md-option ng-value="documento.id" ng-repeat="documento in documentos">{{ documento.nombre}}</md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <input type="text" name="number" ng-model="vm.formData.number" placeholder="Documento" required=""/>
+            </md-input-container>
+            <md-dialog-actions>
+        <button class="md-primary md-confirm-button md-button md-autofocus md-ink-ripple md-default-theme" type="button" ng-click="dialog.hide()" md-autofocus="dialog.$type==='alert'" ng-disabled="dialog.required & amp; & amp; !dialog.result">
+            <span class="ng-binding ng-scope">Restablecer contraseña</span>
+            </button>
+    </md-dialog-actions>
+</md-dialog>
