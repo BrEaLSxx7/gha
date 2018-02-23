@@ -11,13 +11,13 @@
         $scope.logeo=()=>{
             $mdDialog.hide();
             $scope.data={
-                type: $scope.typedocument,
+                roltipo: $scope.typedocument,
                 number: $scope.numberdocument,
                 pass: $scope.password
             };
             Database.login($scope.data)
             .then((response)=>{
-                $log.log(response)
+                $log.log(response);
             })
             .cath((error)=>{
                 $log.error(error);
