@@ -1,7 +1,7 @@
 <?php
 class Response{
     private $user;
-    function _construct($data){
+    function __construct($data){
         $this->user=$data;
     }
     function response (){

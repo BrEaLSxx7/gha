@@ -17,13 +17,13 @@
             };
             Database.login($scope.data)
             .then((response)=>{
-                $log.log(response);
+                $log.log(response.data);
             })
-            .cath((error)=>{
+            .catch((error)=>{
                 $log.error(error);
             });
         }
-        $scope.login = (ev) => {
+        $scope.log = (ev) => {
             $mdDialog.show({
                 controller: "inicioController",
                 templateUrl: 'view/login.html',
