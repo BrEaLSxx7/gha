@@ -1,5 +1,7 @@
 <?php
+
 require_once '../model/conection.php';
+
 class Login extends Conexion{
     private $message='El sistema no se encuentra disponible';
     private $messageok=false;
@@ -18,9 +20,7 @@ class Login extends Conexion{
        $conexion=new Conexion();
        $db=$conexion->conexion();
        $stm = $db->prepare("SELECT usu_id, rol_id, usu_password, usu_documento, usu_login, usu_actived FROM usuario WHERE usu_documento = :id_document AND tipo_documento_id =:tipo");
-       $stm->execute(array(
-           ':id_document'=> $data['number'],
-           ':tipo'=> $data['tipo'])
+       $stm->execute(array(':id_document'=> $data['number'],':tipo'=> $data['tipo'])
         );
        $resultado=$stm->fetchAll();
        return $resultado;
@@ -34,6 +34,9 @@ class Login extends Conexion{
             $pass= $datos[0]->usu_password;
             unset($datos[0]->usu_password);
             if($data['pass'] == $pass){
+                session_start();
+                $_SESSION['rol_id']=$datos[0]->rol_id;
+                $_SESSION[''];
                 $this->message='Bienvenido';
                 $this->messageok=true;
             }else{

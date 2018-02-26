@@ -1,7 +1,7 @@
 (() => {
 	'use strict';
 
-	angular.module('julian', [
+	angular.module('gha', [
 		'ui.router',
 		'oc.lazyLoad',
 		'ngFileUpload',

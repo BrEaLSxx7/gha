@@ -1,7 +1,7 @@
 (() => {
     'use strict';
     angular
-            .module('julian')
+            .module('gha')
             .controller('inicioController', inicioController);
     inicioController.$inject = ['$scope', '$mdDialog','$log','DataBaseService'];
     function inicioController($scope, $mdDialog,$log,Database) {

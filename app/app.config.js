@@ -1,8 +1,8 @@
 (() => {
 	'use strict';
-	angular.module('julian').constant('host','http://localhost/gha/')
+	angular.module('gha').constant('host','http://localhost/gha/')
 	angular
-		.module('julian')
+		.module('gha')
 		.config(config);
 
 	config.$inject = ['$httpProvider', '$stateProvider', '$urlRouterProvider'];

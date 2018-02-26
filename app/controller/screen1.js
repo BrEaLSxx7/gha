@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   angular
-          .module('julian')
+          .module('gha')
           .controller('screen1', screen1);
   screen1.$inject = ['$scope', '$mdSidenav', '$log','$mdDialog'];
   function screen1($scope, $mdSidenav, $log,$mdDialog) {
