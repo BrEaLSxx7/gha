@@ -3,8 +3,8 @@
     angular
             .module('gha')
             .controller('gestionController', gestionController);
-    gestionController.$inject = ['$scope', '$mdSidenav', '$log','$mdDialog'];
-    function gestionController($scope, $mdSidenav, $log,$mdDialog) {
+    gestionController.$inject = ['$scope', '$mdSidenav', '$log','$mdDialog','modal'];
+    function gestionController($scope, $mdSidenav, $log,$mdDialog,modal) {
       $scope.julio = true;
       $scope.julioxdx2 = true;
       $scope.julioxd = () => {
