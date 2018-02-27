@@ -1,6 +1,5 @@
 (() => {
 	'use strict';
-	angular.module('gha').constant('host','http://localhost/gha/')
 	angular
 		.module('gha')
 		.config(config);
@@ -24,50 +23,50 @@
 					}]
 				}
 			})
-			.state('screen1', {
-				url: '/screen1',
-				controller: 'screen1',
-				templateUrl: 'view/screen1.html',
+			.state('dashboard', {
+				url: '/dashboard',
+				controller: 'dashboardController',
+				templateUrl: 'view/dashboard.html',
 				resolve: {
 					loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
 						return $ocLazyLoad.load([{
-							files: ['controller/screen1.js']
+							files: ['controller/dashboardController.js']
 						}]);
 					}]
 				}
 			})
-			.state('screen2',{
-				url: '/screen2',
-				controller: 'screen2',
-				templateUrl: 'view/screen2.html',
+			.state('fichas',{
+				url: '/fichas',
+				controller: 'fichasController',
+				templateUrl: 'view/fichas.html',
 				resolve: {
 					loadMyCtrl: ['$ocLazyLoad', ($ocLazyLoad)=>{
 						return $ocLazyLoad.load([{
-							files:['controller/screen2.js']
+							files:['controller/fichasController.js']
 						}])
 					}]
 				}
 			})
-		.state('screen3',{
-			url: '/screen3',
-			controller: 'screen3',
-			templateUrl: 'view/screen3.html',
+		.state('instructores',{
+			url: '/instructores',
+			controller: 'instructoresController',
+			templateUrl: 'view/instructores.html',
 			resolve: {
 				loadMyCtrl: ['$ocLazyLoad', ($ocLazyLoad)=>{
 					return $ocLazyLoad.load([{
-						files:['controller/screen3.js']
+						files:['controller/instructoresController.js']
 					}])
 				}]
 			}
 		})
-		.state('screen4',{
-			url: '/screen4',
-			controller: 'screen4',
-			templateUrl: 'view/screen4.html',
+		.state('gestion',{
+			url: '/gestion',
+			controller: 'gestionController',
+			templateUrl: 'view/gestion.html',
 			resolve: {
 				loadMyCtrl: ['$ocLazyLoad', ($ocLazyLoad)=>{
 					return $ocLazyLoad.load([{
-						files:['controller/screen4.js']
+						files:['controller/gestionController.js']
 					}])
 				}]
 			}

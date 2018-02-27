@@ -433,7 +433,6 @@
     "openedPathsList": {
         "workspaces": [
             "/var/www/html/gha",
-            "/var/www/html/gha",
             "/home/adsi/Documentos/projects/tiendaser"
         ],
         "files": []

@@ -7,7 +7,7 @@ require_once '../view/json.php';
 // Recibir los datos enviados desde angular js
 $pass=$_POST['pass'];
 $number=$_POST['number'];
-$tipe=$_POST['roltipo'];
+$tipe=$_POST['type'];
 $data=array('pass'=>$pass,'number'=>$number,'roltipo'=>$tipe);
 
 // llamar las clases y objetos requeridas
