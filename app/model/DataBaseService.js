@@ -8,7 +8,9 @@
 		this.login = (data) => {
 			return $http.post(host+'controller/login.controller.php',$httpParamSerializerJQLike(data));
 		};
-
+		this.security = (data) => {
+			 return $http.post(host+'controller/security.php',$httpParamSerializerJQLike(data));
+		}
 
 	}
 })()
