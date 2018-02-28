@@ -1,5 +1,41 @@
 {
-    "window.zoomLevel": 0,
+    "emmet.showSuggestionsAsSnippets": true,
+    "extensions.autoUpdate": true,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.cursorBlinking": true,
+    "window.menuBarVisibility": "toggle",
+    "window.openFoldersInNewWindow": "on",
+    "workbench.colorTheme": "Material Theme",
+    "css.lint.zeroUnits": "warning",
+    "css.lint.duplicateProperties": "warning",
+    "css.lint.important": "warning",
+    "css.lint.float": "warning",
+    "css.lint.idSelector": "warning",
+    "scss.lint.duplicateProperties": "warning",
+    "scss.lint.important": "warning",
+    "scss.lint.float": "warning",
+    "scss.lint.idSelector": "warning",
+    "files.associations": {
+        "*.js": "javascript"
+    },
+    "[javascript]": {},
+    "[php]": {},
+    "php.validate.enable": true,
+    "php.validate.run": "onType",
+    "workbench.activityBar.visible": true,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "git.enableSmartCommit": true,
+    "workbench.colorCustomizations": {
+        "tab.activeBackground": "#282c34",
+        "activityBar.background": "#282c34",
+        "editorGroup.background": "#282c34",
+        "sideBar.background": "#282c34"
+    },
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Material Theme"
+    "extensions.ignoreRecommendations": false,
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top"
 }

@@ -5,14 +5,14 @@
     .controller('fichasController', fichasController);
   fichasController.$inject = ['$scope', '$mdSidenav', '$log', '$mdDialog', '$timeout','modal'];
   function fichasController($scope, $mdSidenav, $log, $mdDialog, $timeout,modal) {
-    $scope.julio = true;
-    $scope.julioxdx2 = true;
-    $scope.julioxd = () => {
-      $scope.julio = !$scope.julio;
+    $scope.notification = true;
+    $scope.title = true;
+    $scope.notifications = () => {
+      $scope.notification = !$scope.notification;
     };
     $scope.toggleLeft = (componentId) => {
       $mdSidenav('left').toggle();
-      $scope.julioxdx2 = !$scope.julioxdx2;
+      $scope.title = !$scope.title;
       $log.log(componentId);
     };
     $scope.modali = () => {
