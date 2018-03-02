@@ -429,10 +429,11 @@
     },
     "theme": "vs-dark Equinusocio-vsc-material-theme-themes-Material-Theme-Darker-json",
     "themeBackground": "#212121",
-    "pickerWorkingDir": "/var/www/html",
+    "pickerWorkingDir": "/home/adsi/desarrollo",
     "openedPathsList": {
         "workspaces": [
             "/var/www/html/gha",
+            "/home/adsi/desarrollo/tienda-ser-cta",
             "/home/adsi/Documentos/projects/tiendaser"
         ],
         "files": []

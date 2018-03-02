@@ -36,7 +36,9 @@ class Login extends Conexion{
             if($data['pass'] == $pass){
                 session_start();
                 $_SESSION['rol_id']=$datos[0]->rol_id;
-                $_SESSION[''];
+                $_SESSION['sesion']=true;
+                $_SESSION['usu_id']=$datos[0]->usu_id;
+                $_SESSION['login']=$datos[0]->usu_login;
                 $this->message='Bienvenido';
                 $this->messageok=true;
             }else{
