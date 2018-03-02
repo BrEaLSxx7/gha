@@ -22,7 +22,7 @@
                             $state.go('dashboard');
                         } else {
                             toastr.error(mensaje);
-                            modal('view/login.html', 'inicioController', $mdDialog, $scope)
+                            modal('view/login.html', 'inicioController', $mdDialog)
                         }
                     })
                     .catch((error) => {
@@ -30,8 +30,11 @@
                     });
             }, 3000);
         }
+        $scope.invitado=()=>{
+            modal('view/sesionInvitado.html', 'inicioController', $mdDialog)
+        }
         $scope.log = () => {
-            modal('view/login.html', "inicioController", $mdDialog, $scope);
+            modal('view/login.html', "inicioController", $mdDialog);
         }
         $scope.recuperar = () => {
             modal('view/recuperar.html', "inicioController", $mdDialog);

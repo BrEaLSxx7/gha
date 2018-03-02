@@ -70,6 +70,18 @@
 					}])
 				}]
 			}
+		})
+		.state('invitado', {
+			url:'/invitado',
+			controller: 'invitadoController',
+			templateUrl: 'view/invitado.html',
+			resolve: {
+				loadMyCtrl : ['$ocLazyLoad', ($ocLazyLoad)=>{
+					return $ocLazyLoad.load([{
+						files:['controller/invitadoController.js']
+					}])
+				}]
+			}
 		});
 	}
 

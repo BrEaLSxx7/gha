@@ -1,0 +1,68 @@
+<md-toolbar class="md-accent prymary-color toll">
+    <div class="md-toolbar-tools" layout="row" flex="100">
+      <div layout="column" flex="70" hide-sm hide-xs>
+        <h1 >
+          Gestion de Horarios Académicos
+        </h1>
+      </div>
+      <md-input-container class="md-block" layout="column" flex="20" hide-sm hide-xs>
+        <i class="material-icons" show-xs show-sm>search</i>
+        <input type="search" class="inp" placeholder="search">
+      </md-input-container>
+      <i class="material-icons md-48" show-xs show-sm flex-xs="2" hide-xl hide-gt-lg hide-lg hide-gt-md hide-md>search</i>
+      <md-button class="prymary-color md-raised w">Salir</md-button>
+    </div>
+  </md-toolbar>
+  <md-divider></md-divider>
+  <div layout="row">
+      <md-card flex="50" class="h90">
+        <div ui-calendar="uiConfig.calendar" class="span8 calendar" ng-model="eventSources" layout-margin></div>
+      </md-card>
+      <md-card layout-margin flex="50" class="h90">
+        <div  layout="row" layout-xs="row" layout-sm="row" flex-xs="100" flex-sm="100">
+            <div flex="20" flex-xs="30" flex-sm="30">
+              <md-toolbar flex="100" class="md-hue-3">
+                <div class="md-toolbar-tools">
+                  <span>Hora</span>
+                </div>
+              </md-toolbar>
+              <md-list-item>
+                12:00 P.M.
+              </md-list-item>
+              <md-list-item>
+                01:00 P.M.
+              </md-list-item>
+              <md-list-item>
+                02:00 P.M.
+              </md-list-item>
+              <md-list-item>
+                03:00 P.M.
+              </md-list-item>
+              <md-list-item>
+                04:00 P.M.
+              </md-list-item>
+              <md-list-item>
+                05:00 P.M.
+              </md-list-item>
+              <md-list-item>
+                06:00 P.M.
+              </md-list-item>
+            </div>
+            <md-divider></md-divider>
+            <div flex="80">
+              <md-toolbar flex="100" class="md-hue-3">
+                <div class="md-toolbar-tools">
+                  <span>Nombre Instructor</span>
+                </div>
+              </md-toolbar>
+              <md-list-item>Julián Andres Lasso Figueroa</md-list-item>
+              <md-list-item>Julián Andres Lasso Figueroa</md-list-item>
+              <md-list-item>Julián Andres Lasso Figueroa</md-list-item>
+              <md-list-item>Erik Augusto Puerta Hernandez</md-list-item>
+              <md-list-item>Erik Augusto Puerta Hernandez</md-list-item>
+              <md-list-item>Erik Augusto Puerta Hernandez</md-list-item>
+              <md-list-item>Erik Augusto Puerta Hernandez</md-list-item>
+            </div>
+          </div>
+      </md-card>
+  </div>
