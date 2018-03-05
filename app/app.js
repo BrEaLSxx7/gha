@@ -1,5 +1,4 @@
 (() => {
-	'use strict';
 
 	angular.module('gha', [
 		'ui.router',

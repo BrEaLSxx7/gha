@@ -25,7 +25,14 @@ class Login extends Conexion{
        $resultado=$stm->fetchAll();
        return $resultado;
     }
-
+    private function datos($data){
+        $conexion=new Conexion();
+        $db=$conexion->conexion();
+        $stm=$db->prepare("SELECT dus_avatar, usu_nombre, usu_correo FROM dato_usuario WHERE usu_id = :id");
+        $stm->execute(array(':id' =>$data));
+        $resultado=$stm->fetchAll();
+        return $resultado;
+    }
     public function log($data){
         $rol=$this->validatetype($data['roltipo']);
         $arr = array('number'=>$data['number'],'tipo'=> (integer)$rol[0]->tpd_id);
@@ -34,6 +41,7 @@ class Login extends Conexion{
             $pass= $datos[0]->usu_password;
             unset($datos[0]->usu_password);
             if($data['pass'] == $pass){
+                $datos_usu=$this->datos($datos[0]->usu_id);
                 session_start();
                 $_SESSION['rol_id']=$datos[0]->rol_id;
                 $_SESSION['sesion']=true;
@@ -49,6 +57,6 @@ class Login extends Conexion{
             $this->message='Datos incorrectos';
             $this->messageok=false;
         }
-        $this->response=array('datos'=>$datos,'mensaje'=>$this->message,'respuesta'=>$this->messageok);
+        $this->response=array('datos'=>array($datos,$datos_usu),'mensaje'=>$this->message,'respuesta'=>$this->messageok);
     }
 }

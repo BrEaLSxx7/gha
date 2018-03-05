@@ -1,10 +1,9 @@
 (() => {
-  'use strict';
   angular
     .module('gha')
     .controller('fichasController', fichasController);
-  fichasController.$inject = ['$scope', '$mdSidenav', '$log', '$mdDialog', '$timeout','modal'];
-  function fichasController($scope, $mdSidenav, $log, $mdDialog, $timeout,modal) {
+  fichasController.$inject = ['$scope', '$mdSidenav', '$log', '$mdDialog', '$timeout', 'modal'];
+  function fichasController($scope, $mdSidenav, $log, $mdDialog, $timeout, modal) {
     $scope.notification = true;
     $scope.title = true;
     $scope.notifications = () => {
@@ -16,19 +15,19 @@
       $log.log(componentId);
     };
     $scope.modali = () => {
-      modal('view/information.html','fichasController',$mdDialog);
+      modal('app/view/information.html', 'fichasController', $mdDialog);
     };
     $scope.answer = () => {
       $mdDialog.hide();
     };
     $scope.modalcre = () => {
-      modal('view/crearf.html','fichasController',$mdDialog);
+      modal('app/view/crearf.html', 'fichasController', $mdDialog);
     }
     $scope.modaledit = () => {
-      modal('view/editf.html','fichasController',$mdDialog);
+      modal('app/view/editf.html', 'fichasController', $mdDialog);
     }
     $scope.modaldelete = (ev) => {
-      modal('view/deletef.html','fichasController',$mdDialog);
+      modal('app/view/deletef.html', 'fichasController', $mdDialog);
     }
     $scope.siguiente = true;
     $scope.informacion = true;
@@ -102,7 +101,7 @@
             height: '5vh',
           })
         } else {
-          $scope.ar1=0;
+          $scope.ar1 = 0;
           $(".panel1").animate({
             height: '0',
           })
@@ -114,31 +113,31 @@
             height: '5vh',
           })
         } else {
-          $scope.ar2=0;
+          $scope.ar2 = 0;
           $(".panel2").animate({
             height: '0',
           })
         }
-      } else if (n===3){
+      } else if (n === 3) {
         $scope.ar3++;
         if ($scope.ar3 <= 1) {
           $(".panel3").animate({
             height: '5vh',
           })
         } else {
-          $scope.ar3=0;
+          $scope.ar3 = 0;
           $(".panel3").animate({
             height: '0',
           })
         }
-      } else if (n===4){
+      } else if (n === 4) {
         $scope.ar4++;
         if ($scope.ar4 <= 1) {
           $(".panel4").animate({
             height: '5vh',
           })
         } else {
-          $scope.ar4=0;
+          $scope.ar4 = 0;
           $(".panel4").animate({
             height: '0',
           })

@@ -1,5 +1,4 @@
 (() => {
-    'use strict';
     angular
         .module('gha')
         .controller('inicioController', inicioController);
@@ -13,16 +12,15 @@
             $timeout(() => {
                 Database.login($scope.data)
                     .then((response) => {
-                        $log.log($scope.load);
                         var respuesta = response.data.respuesta;
                         var mensaje = response.data.mensaje;
                         if (respuesta) {
                             toastr.success(mensaje);
-                            $sessionStorage.date = response.data.datos[0];
+                            $sessionStorage.date = response.data.datos;
                             $state.go('dashboard');
                         } else {
                             toastr.error(mensaje);
-                            modal('view/login.html', 'inicioController', $mdDialog)
+                            modal('app/view/login.html', 'inicioController', $mdDialog)
                         }
                     })
                     .catch((error) => {
@@ -30,14 +28,14 @@
                     });
             }, 3000);
         }
-        $scope.invitado=()=>{
-            modal('view/sesionInvitado.html', 'inicioController', $mdDialog)
+        $scope.invitado = () => {
+            modal('app/view/sesionInvitado.html', 'inicioController', $mdDialog)
         }
         $scope.log = () => {
-            modal('view/login.html', "inicioController", $mdDialog);
+            modal('app/view/login.html', "inicioController", $mdDialog);
         }
         $scope.recuperar = () => {
-            modal('view/recuperar.html', "inicioController", $mdDialog);
+            modal('app/view/recuperar.html', "inicioController", $mdDialog);
         }
     }
 })();

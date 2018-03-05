@@ -429,7 +429,7 @@
     },
     "theme": "vs-dark Equinusocio-vsc-material-theme-themes-Material-Theme-Darker-json",
     "themeBackground": "#212121",
-    "pickerWorkingDir": "/home/adsi/desarrollo",
+    "pickerWorkingDir": "/var/www/html",
     "openedPathsList": {
         "workspaces": [
             "/var/www/html/gha",

@@ -2,47 +2,47 @@
   <md-dialog-content>
     <md-toolbar>
       <div class="md-toolbar-tools prymary-color">
-          <md-button ng-click="answer()" class="md-raised prymary-color" hide-xs hide-sm>
-            editar
-          </md-button>
-          <i class="material-icons" hide-gt-sm hide-md hide-gt-md hide-lg hide-gt-lg hide-xl ng-click="answer()">mode_edit</i>
-          <md-button ng-click="answer()" class="md-raised prymary-color" hide-xs hide-sm>
-            guardar
-          </md-button>
-          <i class="material-icons" hide-gt-sm hide-md hide-gt-md hide-lg hide-gt-lg hide-xl ng-click="answer()">save</i>
-          <md-button ng-click="answer()" class="md-raised prymary-color" hide-xs hide-sm>
-            cerrar
-          </md-button>
-          <i class="material-icons icn" hide-gt-sm hide-md hide-gt-md hide-lg hide-gt-lg hide-xl ng-click="answer()">close</i>
+        <md-button ng-click="edit()" class="md-raised prymary-color" hide-xs hide-sm>
+          editar
+        </md-button>
+        <i class="material-icons" hide-gt-sm hide-md hide-gt-md hide-lg hide-gt-lg hide-xl ng-click="answer()">mode_edit</i>
+        <md-button ng-click="answer()" class="md-raised prymary-color" hide-xs hide-sm>
+          guardar
+        </md-button>
+        <i class="material-icons" hide-gt-sm hide-md hide-gt-md hide-lg hide-gt-lg hide-xl ng-click="answer()">save</i>
+        <md-button ng-click="answer()" class="md-raised prymary-color" hide-xs hide-sm>
+          cerrar
+        </md-button>
+        <i class="material-icons icn" hide-gt-sm hide-md hide-gt-md hide-lg hide-gt-lg hide-xl ng-click="answer()">close</i>
         <div hide-xs hide-sm>
-          <h3>Julian Andres Lasso Figueroa</h3>
+          <h3>{{nombre}}</h3>
         </div>
       </div>
     </md-toolbar>
     <md-divider hide-sm hide-xs></md-divider>
     <div layout="row" layout-sm="column" layout-xs="column">
       <div class="md-dialog-content" layout="column" layout-sm="row" layout-xs="row" flex="30" flex-sm="100" flex-xs="100">
-            <img width="250" height="250" ng-src="./img/descarga.jpg" class="md-card-image">
-          <div class="md-media-lg card-media"></div>
+        <img width="250" height="250" ng-src="{{img}}" class="md-card-image">
+        <div class="md-media-lg card-media"></div>
       </div>
-      <div class="md-dialog-content" layout="column" flex="70"  layout-sm="row" layout-xs="row" flex-sm="100" flex-xs="100" style="padding: 0">
+      <div class="md-dialog-content" layout="column" flex="70" layout-sm="row" layout-xs="row" flex-sm="100" flex-xs="100" style="padding: 0">
         <md-card md-theme-watch class="scrsh">
           <md-card-title>
             Correo:
             <md-input-container class="inputdescription md-block">
-              <input type="text" value="jalasso69@misena.edu.co">
+              <input ng-disabled="verify" type="text" value="{{correo}}">
             </md-input-container>
           </md-card-title>
           <md-card-title>
             Telefono:
             <md-input-container class="inputdescription md-block">
-              <input type="number" value="3117420875">
+              <input ng-disabled="verify" type="number" value="3117420875">
             </md-input-container>
           </md-card-title>
           <md-card-title>
             Horario:
             <md-input-container class="inputdescription md-block">
-              <input type="text" value="Lunes a sabado 8:00 a.m. a 18:00p.m.">
+              <input ng-disabled="verify" type="text" value="Lunes a sabado 8:00 a.m. a 18:00p.m.">
             </md-input-container>
           </md-card-title>
           <md-card-title>
@@ -50,7 +50,7 @@
           </md-card-title>
           <md-card-title>
             <md-input-container class="inputdescription md-block">
-              <input type="text" value="cartago cra 9 # 12-141 SENA-CTA, Regional Valle">
+              <input ng-disabled="verify" type="text" value="cartago cra 9 # 12-141 SENA-CTA, Regional Valle">
             </md-input-container>
           </md-card-title>
           <md-card-title>
@@ -59,10 +59,10 @@
           <md-card-title>
             Ingeniero de sistemas egresado de la Universidad Cooperativa de Colombia con más de 12 años de trayectoria en Ananlisis,
             Diseño, Planeación, Desarrollo e Implementación de Sistemas de Información, Minería de Datos, Analsis y Diseño
-            de Bases de Datos y Mantenimiento de quipos de computo. En el desarrollo de software, mi punto fuerte es el
-            desarrollo Web haciendo uso de los siguientes lenguajes de programación, etiquetas, frameworks, técnicas, entre
-            otros: HTML, CSS (Bootstrap, AngularJS Material), JavaScript (jQuery, AngularJS, NodeJS, AJAX), Bases de Datos
-            (MySQL, PostgreSQL), Bases de Datos NoSQL (MongoDB, Redis) y PHP
+            de Bases de Datos y Mantenimiento de quipos de computo. En el desarrollo de software, mi punto fuerte es el desarrollo
+            Web haciendo uso de los siguientes lenguajes de programación, etiquetas, frameworks, técnicas, entre otros: HTML,
+            CSS (Bootstrap, AngularJS Material), JavaScript (jQuery, AngularJS, NodeJS, AJAX), Bases de Datos (MySQL, PostgreSQL),
+            Bases de Datos NoSQL (MongoDB, Redis) y PHP
           </md-card-title>
         </md-card>
       </div>

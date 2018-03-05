@@ -68,5 +68,6 @@
     "editor.lineHeight": 24,
     "editor.fontLigatures": true,
     "explorer.decorations.badges": true,
-    "terminal.integrated.fontFamily": "Source Code Pro for Powerline"
+    "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+    "diffEditor.ignoreTrimWhitespace": false
 }
